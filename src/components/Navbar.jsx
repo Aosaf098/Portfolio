@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import DarkModeToggle from "./DarkModeToggle";
 import { Download, FolderKanban, Home, Projector } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,14 +15,19 @@ const Navbar = () => {
           </h3>
         </div>
         <ul className="flex gap-12 items-center">
-          <Button>
-            <Home />
-            Home
-          </Button>
-          <Button>
-            <FolderKanban />
-            Projects
-          </Button>
+          <Link to={"/"}>
+            <Button variant="ghost">
+              <Home />
+              Home
+            </Button>
+          </Link>
+          <Link to={'/projects'}>
+            <Button variant="ghost">
+              <FolderKanban />
+              Projects
+            </Button>
+          </Link>
+
           <Button>
             <Download />
             Download CV
