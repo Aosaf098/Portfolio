@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import Marquee from "react-fast-marquee";
 import profilePic from "../../public/assets/pic.jpg";
 import { Typewriter } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className="w-11/12 mx-auto p-10 flex gap-4">
-        <div className="w-1/2 flex flex-col gap-10 p-20">
+      <div className="w-11/12 mx-auto p-10 flex gap-4 relative">
+        <div className="w-1/2 flex flex-col gap-10 p-20 absolute z-10">
           <h1 className="text-5xl font-bold">Md. Aosaf Ibad Chowdhury</h1>
           <div className="flex items-center text-2xl -mt-6 font-semibold">
             <h3>F</h3>
@@ -16,7 +17,7 @@ const Home = () => {
               typeSpeed={80}
             />
           </div>
-          <p className="w-3/4 text-justify text-subtitle">
+          <p className="w-3/4 text-justify text-gray-400">
             Md. Aosaf Ibad Chowdhury is a passionate frontend developer skilled
             in React, JavaScript, and the MERN stack. He has worked on diverse
             projects, including esports reviews, volunteer management, and
@@ -25,23 +26,27 @@ const Home = () => {
             improving his craft.(This is what chatGPT thinks about me)
           </p>
           <div className="flex items-center gap-4 justify-between w-3/4">
-            <Button>Get in Touch</Button>
+            <Link to={'mailto:aosafibad10@gmail.com'}><Button>Get in Touch</Button></Link>
             <div className="flex gap-8 items-center w-32 py-2 *:w-10 *:cursor-pointer">
-              <img
-                src="https://img.icons8.com/?size=48&id=xuvGCOXi8Wyg&format=png"
-                alt=""
-              />
-              <img
-                src="https://img.icons8.com/?size=48&id=AZOZNnY73haj&format=png"
-                alt=""
-              />
+              <Link to={'https://www.linkedin.com/in/aosaf-ibad-chowdhury-a01758290/'}>
+                <img
+                  src="https://img.icons8.com/?size=48&id=xuvGCOXi8Wyg&format=png"
+                  alt=""
+                />
+              </Link>
+              <Link to={'https://github.com/Aosaf098'}>
+                <img
+                  src="https://img.icons8.com/?size=48&id=AZOZNnY73haj&format=png"
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
 
           <div className="w-3/4 space-y-4">
             <h3 className="text-2xl font-semibold">Technologies</h3>
             <div className="h-16 flex items-center gap-4">
-              <Marquee speed={80} className="space-x-4">
+              <Marquee speed={80} pauseOnHover={true} className="space-x-4">
                 <div className="flex items-center gap-4">
                   <img
                     className="w-12"
@@ -98,7 +103,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex justify-end items-end p-8 pb-12">
+        <div className="w-1/2 flex justify-end items-end p-8 pb-12 absolute z-10 right-1 top-[600px]">
           <div className="w-36 aspect-square border border-solid border-gray-500 rounded-full">
             <img
               className="w-full h-full object-cover rounded-full"
@@ -106,6 +111,9 @@ const Home = () => {
               alt=""
             />
           </div>
+        </div>
+        <div className="absolute">
+            <h1 className="text-[20vw] opacity-5 font-bold absolute top-1 z-0 left-6">Aosaf</h1>
         </div>
       </div>
     </>

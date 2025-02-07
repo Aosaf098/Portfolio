@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="flex items-center px-32">
         <div className="p-4 flex-1 flex flex-col gap-2">
           <h1 className="text-2xl font-bold">Aosaf</h1>
-          <h3 className="text-xl font-bold text-subtitle">
+          <h3 className="text-xl font-bold text-gray-400">
             Frontend Developer
           </h3>
         </div>
