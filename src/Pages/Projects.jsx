@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <>
       <h1 className="text-center font-bold text-4xl">Projects</h1>
-      <div className="w-3/4 mt-20 grid place-items-center md:grid-cols-2 lg:grid-cols-3 mx-auto">
+      <div className="w-3/4 mt-20 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 mx-auto gap-4">
         <Card className="w-[350px]">
           <CardHeader>
             <img
