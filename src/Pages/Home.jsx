@@ -3,12 +3,19 @@ import Marquee from "react-fast-marquee";
 import profilePic from "../../public/assets/pic.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 const Home = () => {
   return (
     <>
       <div className="lg:w-11/12 mx-auto p-10 flex flex-row lg:flex-col gap-4 lg:relative">
         <div className="lg:w-1/2 flex flex-col gap-10 lg:p-20 absolute z-10">
-          <h1 className="text-4xl lg:text-5xl font-bold">Md. Aosaf Ibad Chowdhury</h1>
+          <motion.h1
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            className="text-4xl lg:text-5xl font-bold"
+          >
+            Md. Aosaf Ibad Chowdhury
+          </motion.h1>
           <div className="flex items-center text-2xl -mt-6 font-semibold">
             <h3>F</h3>
             <Typewriter
@@ -26,15 +33,21 @@ const Home = () => {
             improving his craft.(This is what chatGPT thinks about me)
           </p>
           <div className="flex items-center gap-4 justify-between lg:w-3/4 px-2 lg:px-0">
-            <Link to={'mailto:aosafibad10@gmail.com'}><Button>Get in Touch</Button></Link>
+            <Link to={"mailto:aosafibad10@gmail.com"}>
+              <Button>Get in Touch</Button>
+            </Link>
             <div className="flex gap-8 items-center w-32 py-2 *:w-10 *:cursor-pointer">
-              <Link to={'https://www.linkedin.com/in/aosaf-ibad-chowdhury-a01758290/'}>
+              <Link
+                to={
+                  "https://www.linkedin.com/in/aosaf-ibad-chowdhury-a01758290/"
+                }
+              >
                 <img
                   src="https://img.icons8.com/?size=48&id=xuvGCOXi8Wyg&format=png"
                   alt=""
                 />
               </Link>
-              <Link to={'https://github.com/Aosaf098'}>
+              <Link to={"https://github.com/Aosaf098"}>
                 <img
                   src="https://img.icons8.com/?size=48&id=AZOZNnY73haj&format=png"
                   alt=""
@@ -113,7 +126,9 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute hidden lg:block">
-            <h1 className="text-[20vw] opacity-5 font-bold absolute top-1 z-0 left-6">Aosaf</h1>
+          <h1 className="text-[20vw] opacity-5 font-bold absolute top-1 z-0 left-6">
+            Aosaf
+          </h1>
         </div>
       </div>
     </>
